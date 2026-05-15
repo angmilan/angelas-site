@@ -1,192 +1,93 @@
-/* ============================================================
-   Angela Milan's Webpage - style.css
-   ============================================================
-   Color palette (UT Austin inspired):
-   - Burnt orange: #BF5700  (primary background)
-   - Navy:        #14213D   (primary text)
-   - Khaki:       #E8DCC4   (cards / content panels)
-   - White:       #FFFFFF   (highlights and contrast)
-   ============================================================ */
+<!DOCTYPE html>
+<html>
+<head>
+  <!--The <title> tag is the name that shows up in the browser tab-->
+  <title>Angela Milan's Webpage</title>
 
-/* ---- Page basics ---- */
-body {
-  background-color: #BDACBA;          /* burnt orange background */
-  color: #776775;                     /* navy text for contrast  */
-  font-family: Georgia, "Times New Roman", serif;
-  max-width: 900px;
-  margin: 0 auto;                     /* centers the whole page  */
-  padding: 30px 20px;
-  line-height: 1.6;
-}
+  <!--This line connects our HTML page to a separate CSS file called style.css.
+      CSS controls how the page looks (colors, fonts, spacing).
+      Keeping CSS in its own file is a best practice—it keeps HTML clean.-->
+  <link rel="stylesheet" href="style.css">
+</head>
+ <!--Navigation bar linking to the bakery game-->
+  <nav class="site-nav">
+    <a href="index.html" class="nav-link active">🏠 Home</a>
+    <a href="bakery-game.html" class="nav-link">🧁 Bakery Game</a>
+  </nav>
 
-/* ---- Page title ---- */
-.page-title {
-  text-align: center;
-  color: #776775;                     /* navy title */
-  background-color: #DEC7C3;          /* khaki bar behind title */
-  font-size: 42px;
-  font-weight: bold;
-  padding: 20px;
-  border: 3px solid #14213D;
-  border-radius: 8px;
-  letter-spacing: 1px;
-}
+<body>
 
-/* ---- Photo row at top: three images side-by-side ---- */
-.photo-row {
-  display: flex;                      /* puts items in a row */
-  justify-content: center;            /* centers them horizontally */
-  align-items: stretch;
-  gap: 8px;                           /* small space between photos */
-  margin: 20px 0 10px 0;
-  border-radius: 30px
-}
+  <!--This is the title at the top of the page-->
+  <h1 class="page-title">Angela Milan's Webpage</h1>
 
-.row-photo {
-  width: 33%;                         /* each photo takes ~one-third */
-  height: 280px;                      /* all photos same height */
-  object-fit: cover;                  /* crop to fill, no distortion */
-  border: 4px solid #14213D;          /* navy frame */
-  border-radius: 30px;
-  background-color: #FFFFFF;
-}
+  <!--Two photos in a horizontal row.
+      Lesson for class: alt text should always be honest about what an image is.-->
+  <div class="photo-row">
+    <img class="row-photo"
+         alt="A photo about me "
+         src="IMG_8688.jpg" />
+    <img class="row-photo"
+         alt="baked good"
+         src="IMG_8752.jpg" />
+  </div>
+  <p class="caption">
+    <em>Sitting in The Green Park near Buckingham Palace, Strawberry Danish</em>
+  </p>
 
-/* ---- Section headings (Fall 2026 Schedule, Videos, etc.) ---- */
-h3 {
-  color: #FFFFFF;                     /* white headings on orange */
-  font-size: 26px;
-  border-bottom: 2px solid #14213D;
-  padding-bottom: 6px;
-  margin-top: 30px;
-}
+  <!--This is the About Me paragraph-->
+  <p class="about-me">
+    Hi, my name is Angela Milan, and I’m usually planning my next trip, looking for a new coffee shop to try, or baking something instead of doing what I’m supposed to be doing. I love collecting little experiences, good playlists, and recommendations from people I meet. Right now, I’m still figuring out what I want my career and future to look like, but I kind of like being in that stage of exploring. Hook 'em!
+  </p>
 
-/* ---- About Me paragraph ---- */
-.about-me {
-  background-color: #DEC7C3;          /* khaki "card" */
-  color: #14213D;
-  padding: 20px 25px;
-  border-radius: 8px;
-  border-left: 6px solid #14213D;
-  font-size: 17px;
-}
+  <hr />
 
-/* ---- Resume line ---- */
-.resume-line {
-  text-align: center;
-  background-color: #FFFFFF;
-  color: #14213D;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 18px;
-  font-weight: bold;
-}
+  <!--Work experience as a bulleted list-->
+  <h3>Student at UT </h3>
+  <ul>
+    <li><strong>Texas Pearls</strong> &mdash; Member (2025 &ndash; Present)</li>
+    <li><strong>ALPFA</strong> &mdash; Member (2025 &ndash; Present)</li>
+    <li><strong>Pappasitos</strong> &mdash; Host (2025 &ndash; Present)</li>
+    <li><strong>McCombs School of Business</strong> &mdash; Unspecified Business (2025&ndash; 2029)</li>
+  </ul>
 
-/* ---- Captions under photos ---- */
-.caption {
-  text-align: center;
-  color: #FFFFFF;
-  font-size: 14px;
-  margin-top: 0;
-  padding: 0 20px;
-}
+  <hr />
 
-/* ---- Lists ---- */
-ol, ul {
-  background-color: #DEC7C3;
-  color: #14213D;
-  padding: 18px 18px 18px 45px;       /* extra left padding for bullets */
-  border-radius: 8px;
-  font-size: 17px;
-}
 
-li {
-  margin-bottom: 8px;
-}
+  <!--My Favorite Things: a bulleted list of links-->
+  <h3>My Favorite Things</h3>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/La_La_Land" target="_blank">La La Land </a> &mdash; my favorite movie because the soundtrack’s amazing and it feels honest about love, timing, and chasing what you want.</li>
+    <li><a href="https://www.sweetandsavorybyshinee.com/dulce-de-leche-cheesecake/" target="_blank">My fav dessert </a> &mdash; My favorite dessert is cheesecake, this recipe is the best</li>
+    <li><a href="https://letterboxd.com/angmilan/" target="_blank"> My favortite genre of movies are Romcoms </li>
+  </ul>
 
-/* ---- Links ---- */
-a {
-  color: #14213D;
-  font-weight: bold;
-  text-decoration: underline;
-}
+  <hr />
 
-a:hover {
-  color: #BF5700;
-  background-color: #FFFFFF;
-  padding: 1px 3px;
-  border-radius: 3px;
-}
+  <!--YouTube videos: each one is an iframe.
+      Tip for students: to add your own, go to YouTube > Share > Embed,
+      and copy the FULL iframe tag.-->
+  <h3> Random fun thing about me </h3>
+  <div class="video-grid">
 
-/* ---- Horizontal rules ---- */
-hr {
-  border: none;
-  border-top: 2px dashed #14213D;
-  margin: 30px 0;
-}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2Njmx-UuU3M?si=uZwJfhGf3XCGLZMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>s
 
-/* ---- Video grid: 2 videos per row ---- */
-.video-grid {
-  justify-items: center;
-  text-align:center;
-  background-color: #DEC7C3;
-  padding: 40px;
-  border-radius: 8px;
-}
+  <hr />
 
-.video-grid iframe {
-  width: 75%;
-  justify-items: center;
-  text-align:center;
-  border: 3px solid #14213D;
-  border-radius: 6px;
-  background-color: #14213D;
-}
+  <!--Contact section.
+      The mailto: link opens the user's email program.
+      LinkedIn opens in a new tab.-->
+  <h3>Contact Me</h3>
+  <p class="contact-line">
+    <a href="mailto:am236547@my.utexas.edu">am236547@my.utexas.edu</a>
+    &nbsp;|&nbsp;
+    <a href="http://www.linkedin.com/in/milan-angela" target="_blank">My LinkedIn Profile</a>
+  </p>
 
-/* ---- Contact line ---- */
-.contact-line {
-  text-align: center;
-  background-color: #FFFFFF;
-  color: #14213D;
-  padding: 15px;
-  border-radius: 6px;
-  font-size: 17px;
-  font-weight: bold;
-}
+  <!--Footer with copyright-->
+  <footer class="page-footer">
+    Copyright &copy; 2026 Angela Milan. All Rights Reserved.
+  </footer>
 
-/* ---- Footer ---- */
-.page-footer {
-  text-align: center;
-  color: #FFFFFF;
-  font-size: 13px;
-  margin-top: 40px;
-  padding: 15px;
-  border-top: 2px solid #14213D;
-  letter-spacing: 0.5px;
-}
+</body>
+</html>
 
-/* ---- Mobile / smaller screens ---- */
-@media (max-width: 700px) {
-  .video-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .page-title {
-    font-size: 30px;
-  }
-
-  /* Stack the photos vertically on small screens */
-  .photo-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .row-photo {
-    width: 90%;
-    height: 250px;
-  }
-
-  /* Stack contact links on small screens */
-  .contact-line {
-    font-size: 15px;
-  }
-}
